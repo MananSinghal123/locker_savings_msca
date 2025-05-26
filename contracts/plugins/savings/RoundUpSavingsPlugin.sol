@@ -10,11 +10,11 @@ import {UserOperation} from "../../interfaces/erc4337/UserOperation.sol";
 import {SIG_VALIDATION_PASSED
 } from "../../libraries/Constants.sol";
 
-/// @title Savings Plugin
+/// @title RoundUp Savings Plugin
 /// @author Locker
-/// @notice This plugin lets users automatically save when making payments
-contract SavingsPlugin is BasePlugin {
-    string public constant NAME = "Locker Savings Plugin";
+/// @notice This plugin lets users automatically save when making payments by rounding up to the nearest specified amount
+contract RoundUpSavingsPlugin is BasePlugin {
+    string public constant NAME = "Locker RoundUp Savings Plugin";
     string public constant VERSION = "1.0.0";
     string public constant AUTHOR = "Locker Team";
 
@@ -106,7 +106,7 @@ contract SavingsPlugin is BasePlugin {
         UserOperation calldata, // userOp
         bytes32              // userOpHash
     ) external pure override returns (uint256) {
-        revert("SavingsPlugin: use dependency for validation");
+        revert("RoundUpSavingsPlugin: use dependency for validation");
     }
 
     /// @notice Plugin manifest describing this plugin's functions and validations.

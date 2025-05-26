@@ -2,14 +2,14 @@
 pragma solidity ^0.8.26;
 
 import {Script, console} from "forge-std/Script.sol";
-import {SavingsPlugin} from "../contracts/plugins/savings/SavingsPlugin.sol";
+import {RoundUpSavingsPlugin} from "../contracts/plugins/savings/RoundUpSavingsPlugin.sol";
 
 contract DeplpySavingsPlugin is Script {
     function run() public {
         vm.startBroadcast();
 
         // Deploy contract
-        SavingsPlugin savingsPlugin = new SavingsPlugin();
+        RoundUpSavingsPlugin savingsPlugin = new RoundUpSavingsPlugin();
         address deployedAddress = address(savingsPlugin);
 
         console.log("Deployed SavingsPlugin at:", deployedAddress);
