@@ -7,8 +7,7 @@ import {IStandardExecutor} from "../../interfaces/IStandardExecutor.sol";
 import {ManifestFunction, ManifestExecutionHook, ManifestAssociatedFunctionType, ManifestAssociatedFunction, PluginManifest, PluginMetadata, IPlugin} from "../../interfaces/IPlugin.sol";
 import {IERC20} from "forge-std/interfaces/IERC20.sol";
 import {UserOperation} from "../../interfaces/erc4337/UserOperation.sol";
-import {SIG_VALIDATION_PASSED
-} from "../../libraries/Constants.sol";
+import {SIG_VALIDATION_PASSED} from "../../libraries/Constants.sol";
 
 /// @title RoundUp Savings Plugin
 /// @author Locker
